@@ -7,7 +7,7 @@ on:
 
 strategy:
   matrix:
-    py-v: [14.9, 15.0]
+    py-v: [14.9, 15]
 
 jobs:
   build:
