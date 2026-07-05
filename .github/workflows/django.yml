@@ -5,14 +5,15 @@ on:
     branches:
       - egc_test
 
-strategy:
-  matrix:
-    py-v: [14.9, 15]
 
 jobs:
   build:
 
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        py-v: [14.9, 15]
 
     services:
       postgres:
