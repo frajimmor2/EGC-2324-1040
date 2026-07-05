@@ -4,7 +4,10 @@ on:
   push:
     branches:
       - egc_test
-  
+
+strategy:
+  matrix:
+    py-v: [14.9, 15.0]
 
 jobs:
   build:
@@ -13,7 +16,7 @@ jobs:
 
     services:
       postgres:
-        image: postgres:14.9
+        image: postgres:${{matrix.py-v}}
         env:
           POSTGRES_USER: decide
           POSTGRES_PASSWORD: decide
